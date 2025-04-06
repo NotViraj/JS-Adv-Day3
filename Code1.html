@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="abc"></p>
+    <button onclick="ascending()">ascending order</button>
+    <button onclick="descending()">decending order</button>
+    <button onclick="reset()">Reset</button>
+    <script>
+
+        var efg = [5, 8, 2, 4, 1];
+        document.getElementById("abc").innerHTML = efg;
+        function ascending() {
+            efg.sort(function(a, b) {
+                return a - b;
+            });
+            document.getElementById("abc").innerHTML = efg;
+        }
+        function descending() {
+            efg.sort(function(a, b) {
+                return b - a;
+            });
+            document.getElementById("abc").innerHTML = efg;
+        }
+        function reset() {
+            efg = [5, 8, 2, 4, 1];
+            document.getElementById("abc").innerHTML = efg;
+        }
+
+    </script>
+</body>
+</html>
